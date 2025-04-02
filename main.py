@@ -117,8 +117,8 @@ class FullCharacter:
                 for chainG in character.chainGs:
                     if singleEntity in chainG.entity:
                         newScore += 3
-                    else:
-                        newScore += 1
+
+                newScore = max(newScore, 1)
                 scoreList.append(newScore)
             
             scoreList.sort(key = lambda a:a, reverse = True)
