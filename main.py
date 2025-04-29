@@ -136,13 +136,13 @@ class StrategyTrees:
     def __init__(self):
         # 初始化全部策略树
         self.allTrees: Dict[str, List[StrategyTree]] = {
-            "刃" : [飞剑(), 撕裂(), 刃环(), 刀刃风暴()],
-            "暗" : [触手(), 影子(), 影刺(), 黑洞()],
-            "电" : [感电(), 闪电链(), 落雷(), 电球()],
+            "刃" : [飞剑(), 撕裂(), 刃环(), 刀刃风暴(), 飞刃()],
+            "暗" : [触手(), 影子(), 影刺(), 黑洞(), 暗影标记()],
+            "电" : [感电(), 闪电链(), 落雷(), 电球(), 电桩()],
             "火" : [燃烧(), 火弹(), 火环(), 地雷(), 火精灵()],
-            "冰" : [寒冷(), 冰锥(), 冰刺()],
+            "冰" : [寒冷(), 冰锥(), 冰刺(), 冰雹(), 冰剑()],
             "光" : [光枪(), 闪光(), 光波(), 光阵(), 圣光标记()],
-            "毒" : [中毒(), 史莱姆(), 毒弹(), 毒液()]
+            "毒" : [中毒(), 史莱姆(), 毒弹(), 毒液(), 毒泡河豚()]
         }
 
         self.attributes = list(self.allTrees.keys())
@@ -299,5 +299,5 @@ if __name__ == "__main__":
     needAttribute = file["needAttribute"]
 
     trees = StrategyTrees()
-    trees.caculate(needAttribute = needAttribute, includeStra = includeStra, outputLen = outputLen)
-    #trees.caculateAll()
+    #trees.caculate(needAttribute = needAttribute, includeStra = includeStra, outputLen = outputLen)
+    trees.caculateAll()

@@ -73,3 +73,18 @@ class 刀刃风暴(StrategyTree):
         self.add(newStra = Strategy(name = "嗜血风暴", level = 3, location = "auto", trigger = ["技能风暴"], entity = ["刀刃风暴", "撕裂"]))
 
         self.add(newStra = Strategy(name = "黑洞刀刃", level = 3, location = "auto", trigger = ["传承技黑洞"], entity = ["刀刃风暴", "黑洞"]))
+
+class 飞刃(StrategyTree):
+    def __init__(self):
+        super().__init__(attribute = "刃", subclass = "飞刃")
+
+        self.add(newStra = Strategy(name = "普攻飞刃", level = 0, location = "普攻", entity = ["飞刃"]))
+
+        self.add(newStra = Strategy(name = "潜伏飞刃", level = 1, location = "auto", trigger = "auto"))
+        self.add(newStra = Strategy(name = "飞刃轮舞", level = 1, location = "auto", trigger = "auto"))
+        self.add(newStra = Strategy(name = "飞刃冲击", level = 1, location = "auto", trigger = "auto"))
+
+        self.add(newStra = Strategy(name = "飞刃切割", level = 2, location = "auto", trigger = "auto"))
+
+        self.add(newStra = Strategy(name = "传送飞刃", level = 3, location = "auto", trigger = ["普攻飞刃"], entity = ["飞刃"]))
+        self.add(newStra = Strategy(name = "落雷飞刃", level = 3, location = "auto", trigger = ["冲刺落雷"], entity = ["飞刃", "落雷"]))

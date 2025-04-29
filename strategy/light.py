@@ -39,6 +39,9 @@ class 闪光(StrategyTree):
         self.add(newStra = Strategy(name = "标记闪光", level = 3, location = "auto", trigger = ["圣光标记"], entity = ["圣光标记", "闪光"]))
         self.add(newStra = Strategy(name = "光枪闪光", level = 3, location = "auto", trigger = ["技能光枪"], entity = ["光枪", "闪光"]))
         self.add(newStra = Strategy(name = "光枪闪光", level = 3, location = "auto", trigger = ["传承技光枪"], entity = ["光枪", "闪光"]))
+        self.add(newStra = Strategy(name = "影链致盲", level = 3, location = "auto", trigger = ["普攻影链"], entity = ["暗影链条", "致盲"]))
+        self.add(newStra = Strategy(name = "影链致盲", level = 3, location = "auto", trigger = ["技能影链"], entity = ["暗影链条", "致盲"]))
+
 
 class 光波(StrategyTree):
     def __init__(self):
@@ -86,4 +89,6 @@ class 圣光标记(StrategyTree):
 
         self.add(newStra = Strategy(name = "至圣标记", level = 3, location = "普攻", trigger = ["普攻光波", "圣光标记"], entity = ["光波", "圣光标记"]))
         self.add(newStra = Strategy(name = "冰刺标记", level = 3, location = "召唤", trigger = ["召唤冰刺", "圣光标记"], entity = ["冰刺", "圣光标记"]))
+        self.add(newStra = Strategy(name = "标记光阵", level = 3, location = "召唤", trigger = ["召唤光阵", "圣光标记"], entity = ["光阵", "圣光标记"]))
+        
       
