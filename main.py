@@ -299,5 +299,5 @@ if __name__ == "__main__":
     needAttribute = file["needAttribute"]
 
     trees = StrategyTrees()
-    #trees.caculate(needAttribute = needAttribute, includeStra = includeStra, outputLen = outputLen)
-    trees.caculateAll()
+    trees.caculate(needAttribute = needAttribute, includeStra = includeStra, outputLen = outputLen)
+    #trees.caculateAll()
